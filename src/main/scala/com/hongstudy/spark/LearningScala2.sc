@@ -44,3 +44,22 @@ println({val x = 10; x + 20})
 // Write some code that prints out the first 10 values of the Fibonacci sequence.
 // This is the sequence where every number is the sum of the two numbers before it.
 // So, the result should be 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+//x = 0
+//def fibonacci1(n: Long): Long = n match {
+//  case 0|1 => n
+//  case _ => fibonacci1(n-1) + fibonacci1(n-2)
+//}
+
+
+def Fibonacci2(n: Long):Long = {
+  var first = 0
+  var second = 1
+  var count = 0
+  while(count<35){
+    val sum = first + second
+    first = second
+    second = sum
+    count = count +1
+  }
+  return first
+}
