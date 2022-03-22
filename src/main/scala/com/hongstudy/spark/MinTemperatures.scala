@@ -26,9 +26,9 @@ object MinTemperatures {
     val parsedLines = lines.map(parseLine)
 
     val minTemps = parsedLines.filter(x => x._2 == "TMIN")
-
+//    Station ID와 온도 toFloat에 매핑하고
     val stationTemps = minTemps.map( x => (x._1, x._3.toFloat))
-
+//    각 기상 관축소에서 발견된 최소 온도를 추적하기 위해 key로 줄임
     val minTempsByStation = stationTemps.reduceByKey((x,y) => math.min(x,y))
 
     val results = minTempsByStation.collect()
