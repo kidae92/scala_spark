@@ -1,4 +1,4 @@
-consumerKey 12345
-consumerSecret 12345
-accessToken 12345
-accessTokenSecret 12345
+consumerKey oHZC7dD8Nm8Ju
+consumerSecret 6uNa56KErz
+accessToken 1489184
+accessTokenSecret lYKjq3R
