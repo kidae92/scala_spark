@@ -11,7 +11,7 @@ import scala.collection.mutable
 object MovieRecommendationsALSDataset {
 
   case class MoviesNames(movieId: Int, movieTitle: String)
-  // Row format to feed into ALS
+
   case class Rating(userID: Int, movieID: Int, rating: Float)
 
   def getMovieName(movieNames: Array[MoviesNames], movieId: Int): String = {
@@ -19,7 +19,7 @@ object MovieRecommendationsALSDataset {
 
     result.movieTitle
   }
-  /** Our main function where the action happens */
+
   def main(args: Array[String]) {
 
 
@@ -94,7 +94,7 @@ object MovieRecommendationsALSDataset {
       }
     }
 
-    // Stop the session
+
     spark.stop()
 
   }
